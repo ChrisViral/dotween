@@ -131,7 +131,7 @@ namespace DG.Tweening
             ){
                 TweenerCore<Vector3, Path, PathOptions> t = null;
                 bool rBodyFoundAndTweened = false;
-#if true // PHYSICS_MARKER
+#if DOTPHYSICS // PHYSICS_MARKER
                 if (tweenRigidbody) {
                     Rigidbody rBody = target.GetComponent<Rigidbody>();
                     if (rBody != null) {
@@ -142,7 +142,7 @@ namespace DG.Tweening
                     }
                 }
 #endif
-#if true // PHYSICS2D_MARKER
+#if DOTPHYSICS2D // PHYSICS2D_MARKER
                 if (!rBodyFoundAndTweened && tweenRigidbody) {
                     Rigidbody2D rBody2D = target.GetComponent<Rigidbody2D>();
                     if (rBody2D != null) {
